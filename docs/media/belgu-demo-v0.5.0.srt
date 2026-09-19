@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:05,000
+Belgü · İşaretten istihbarata.
+Finansal tehdit araştırması · Kurmaca veriler ve kayıtlı demo yanıtları.
+
+2
+00:00:05,000 --> 00:00:11,000
+Her inceleme bir işaretle başlar.
+Müşteri bildirimi veya analist keşfi: tam adresi ve bağlamını birlikte kaydedin.
+
+3
+00:00:11,000 --> 00:00:15,000
+Markayı tanıyın.
+Resmî alan adlarını ve marka referanslarını araştırmanın bağlamına ekleyin.
+
+4
+00:00:15,000 --> 00:00:21,000
+Bir bağlantıdan ilişkili altyapıya.
+120 kurmaca alan adını ortak IP, sertifika ve JavaScript izleriyle gruplayın.
+
+5
+00:00:21,000 --> 00:00:26,000
+Kalabalık sonuçlarda odağınızı koruyun.
+Kapsam genelinde arayın; filtreleri, sıralamayı ve çalışma görünümünü kaydedin.
+
+6
+00:00:26,000 --> 00:00:33,000
+Bağlantıları adım adım izleyin.
+Grafikte komşu varlıkları açın, araştırma izini ve önemli düğümleri koruyun.
+
+7
+00:00:33,000 --> 00:00:39,000
+Her bağlantının bir dayanağı var.
+Kaynağı, zamanı ve ham gözlemi açın; seçtiğiniz kanıtı inceleme panosuna sabitleyin.
+
+8
+00:00:39,000 --> 00:00:46,000
+Masaüstü ve mobil, yan yana.
+Sayfa görüntülerini karşılaştırın; farklı cihaz görünümlerini aynı masada inceleyin.
+
+9
+00:00:46,000 --> 00:00:51,000
+Görüntünün arkasındaki içeriği görün.
+Sayfa metni, yerel OCR ve form gözlemleri görsel kanıtın yanında dursun.
+
+10
+00:00:51,000 --> 00:00:55,000
+Benzer görünümleri birlikte değerlendirin.
+Yerel görsel sıralamada algısal yapı, kenar ve renk benzerliğini ayrı ayrı görün.
+
+11
+00:00:55,000 --> 00:01:00,000
+Sıradaki adresi kanıt seçsin.
+İlişkili adayları öncelik puanı ve bu puanı oluşturan kaynaklarla inceleyin.
+
+12
+00:01:00,000 --> 00:01:06,000
+Araştırmanın hafızası olsun.
+Ortak izleri önceki incelemelerle eşleştirin; geçmiş analist kararına geri dönün.
+
+13
+00:01:06,000 --> 00:01:14,000
+Türkçe analiz. Açılabilir kaynaklar.
+Özetin ve bulguların dayanaklarına inin. Bu turda kayıtlı demo yanıtı gösteriliyor.
+
+14
+00:01:14,000 --> 00:01:21,000
+Araştırmanıza Türkçe sorun.
+İnceleme bağlamındaki kanıtları ve önceki izleri kaynaklarıyla yanıtlayan yardımcı.
+
+15
+00:01:21,000 --> 00:01:26,000
+İki keşif arasında ne değişti?
+Yeni kayıtları, değişen değerleri ve önceki gözlemleri birlikte karşılaştırın.
+
+16
+00:01:26,000 --> 00:01:31,000
+Değişiklikleri takipte kalın.
+Hedef ve kontrol aralığı belirleyin; anlamlı değişiklikleri bildirimlerden izleyin.
+
+17
+00:01:31,000 --> 00:01:36,000
+Karar ve gerekçe bir arada.
+Başlangıç bulgularını, analist notlarını ve değerlendirme geçmişini saklayın.
+
+18
+00:01:36,000 --> 00:01:42,000
+Kanıtları bir anlatıya dönüştürün.
+Panodaki dayanakları sıralayın; kimlikleri maskelenmiş HTML sunumu hazırlayın.
+
+19
+00:01:42,000 --> 00:01:49,000
+İncelemenin nasıl geliştiğini gösterin.
+Zaman çizgisinde ilerleyin; kayıtlı olayları ve ilişki grafiğini yeniden oynatın.
+
+20
+00:01:49,000 --> 00:01:53,000
+Arka plandaki işler görünür olsun.
+Keşif ve yakalama çalışmalarının durumunu, sonuçlarını ve hatalarını takip edin.
+
+21
+00:01:53,000 --> 00:02:01,000
+Model seçimi size ait.
+Yerel API, Claude, OpenAI, Gemini ve OpenRouter bağlantılarını Ayarlar’dan yönetin.
+
+22
+00:02:01,000 --> 00:02:07,000
+Keşif kaynaklarını tek yerden bağlayın.
+Reverse IP, pasif DNS ve tehdit istihbaratı sağlayıcılarının API bilgilerini yönetin.
+
+23
+00:02:07,000 --> 00:02:11,000
+Araştırmayı paylaşılabilir çıktıya taşıyın.
+İnceleme raporunu Markdown, yapılandırılmış kayıtları JSON olarak dışa aktarın.
+
+24
+00:02:11,000 --> 00:02:16,000
+Belgü · İşaretten istihbarata.
+Keşif, kanıt, Türkçe analiz ve paylaşım.

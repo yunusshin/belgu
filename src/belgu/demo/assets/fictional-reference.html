@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuzey Yıldızı — Kurmaca marka referansı</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 740px; font: 16px Arial, sans-serif; color: #163635; background: #f3f5f3; }
+    header { height: 94px; padding: 26px 50px; background: white; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #dce5df; }
+    .mark { background: #12644e; color: white; width: 39px; height: 39px; border-radius: 12px; display: grid; place-items: center; font-size: 26px; }
+    .name { font-weight: 700; letter-spacing: 2px; font-size: 17px; }
+    .small { font-size: 9px; letter-spacing: 3px; margin-top: 6px; color: #82958e; }
+    nav { display: flex; gap: 26px; margin-left: auto; align-items: center; font-size: 12px; color: #58766a; }
+    nav a { color: inherit; text-decoration: none; }
+    nav .home { padding: 10px 14px; color: #12644e; background: #e9f3ed; border: 1px solid #d7e8dc; border-radius: 7px; font-size: 11px; }
+    main { width: 940px; margin: 37px auto 0; }
+    .hero { display: grid; grid-template-columns: 1fr 408px; align-items: center; gap: 50px; }
+    .eyebrow { font-size: 11px; font-weight: bold; letter-spacing: 2px; color: #518071; }
+    h1 { font-size: 47px; line-height: 1.13; letter-spacing: -2px; margin: 19px 0 18px; }
+    .intro p { max-width: 410px; margin: 0; color: #6b8277; font-size: 15px; line-height: 1.8; }
+    .explore { display: inline-flex; gap: 26px; align-items: center; padding: 14px 19px; border-radius: 8px; background: #15634e; color: white; margin-top: 25px; font-size: 12px; font-weight: bold; text-decoration: none; }
+    .art { height: 296px; border-radius: 24px; background: #dcebe2; position: relative; overflow: hidden; padding: 25px; }
+    .orbit { width: 270px; height: 270px; border: 1px solid #a9c9b5; border-radius: 50%; position: absolute; left: 140px; top: 100px; }
+    .orbit::after { content: ''; position: absolute; border: 1px solid #bdd7c5; width: 350px; height: 350px; border-radius: 50%; left: -41px; top: -41px; }
+    .star { position: absolute; right: 30px; top: 23px; color: #8db5a0; font-size: 70px; line-height: 1; }
+    .note { background: #ffffffed; border: 1px solid #cdded1; border-radius: 14px; width: 251px; padding: 24px; position: absolute; left: 27px; top: 37px; transform: rotate(-6deg); box-shadow: 0 12px 25px #17412d0a; }
+    .note span { font-size: 9px; letter-spacing: 2px; color: #71917e; }
+    .note strong { display: block; margin-top: 12px; font-size: 27px; letter-spacing: -1px; line-height: 1.25; }
+    .bars { display: flex; gap: 7px; align-items: end; height: 55px; margin-top: 17px; }
+    .bars i { display: block; width: 28px; background: #bedbc9; border-radius: 4px 4px 0 0; }
+    .compass { position: absolute; bottom: 27px; right: 24px; width: 139px; padding: 17px; border-radius: 12px; background: #15634e; color: white; box-shadow: 0 10px 24px #163d2420; }
+    .compass b { font-size: 10px; letter-spacing: 2px; color: #bedccb; }
+    .compass p { margin: 10px 0 0; font-size: 17px; line-height: 1.3; }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 37px; }
+    .service { min-height: 146px; padding: 22px; background: white; border: 1px solid #dce5df; border-radius: 12px; }
+    .service span { font-size: 10px; color: #8da997; letter-spacing: 1.8px; }
+    .service h2 { font-size: 17px; margin: 12px 0 7px; }
+    .service p { font-size: 12px; line-height: 1.65; margin: 0; color: #798d80; }
+    .address { display: flex; justify-content: space-between; margin-top: 23px; color: #7c9384; font-size: 10px; letter-spacing: .4px; }
+    .address strong { color: #3c6c56; font-weight: 500; }
+    .banner { position: fixed; bottom: 0; width: 100%; text-align: center; background: #e9eee8; color: #667b6c; font-size: 10px; padding: 13px; letter-spacing: 1.1px; border-top: 1px solid #dce5df; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="mark">✦</div>
+    <div><div class="name">KUZEY YILDIZI</div><div class="small">FİNANS • KURGUSAL MARKA</div></div>
+    <nav aria-label="Kurmaca ana sayfa"><a href="#cozumler">Çözümlerimiz</a><a href="#hakkimizda">Hakkımızda</a><span class="home">Marka ana sayfası</span></nav>
+  </header>
+  <main>
+    <div class="hero">
+      <section class="intro" id="hakkimizda">
+        <div class="eyebrow">HAYATIN HER YÖNÜNDE</div>
+        <h1>Yarınınıza birlikte<br>yön verin.</h1>
+        <p>Günlük yaşamdan gelecek planlarına, finans dünyanızı sadeleştiren çözümleri keşfedin.</p>
+        <a class="explore" href="#cozumler">Çözümleri keşfedin <span>→</span></a>
+      </section>
+      <div class="art" aria-label="Kurmaca markanın büyüme ve yön temalı çizimi">
+        <div class="orbit"></div><div class="star">✦</div>
+        <div class="note"><span>KÜÇÜK ADIMLAR</span><strong>Geleceğe<br>yer açın.</strong><div class="bars"><i style="height:18px"></i><i style="height:26px"></i><i style="height:37px"></i><i style="height:44px"></i><i style="height:55px;background:#5d9c83"></i></div></div>
+        <div class="compass"><b>KUZEYİNİZ</b><p>Her yeni<br>başlangıçta.</p></div>
+      </div>
+    </div>
+    <section class="services" id="cozumler" aria-label="Kurmaca marka çözümleri">
+      <article class="service"><span>01 / GÜNLÜK YAŞAM</span><h2>Hayatınıza eşlik eder.</h2><p>Günlük ihtiyaçlarınız için anlaşılır, sade bir finans deneyimi.</p></article>
+      <article class="service"><span>02 / GELECEK PLANLARI</span><h2>Hedeflerinize alan açın.</h2><p>Bugünkü adımlarınızı yarınki planlarınızla buluşturun.</p></article>
+      <article class="service"><span>03 / BİRLİKTE</span><h2>Her adımda yanınızda.</h2><p>Markamızı ve yaklaşımımızı yakından tanıyın.</p></article>
+    </section>
+    <div class="address"><strong>kuzeyyildizi.test · Kurmaca resmi ana sayfa</strong><span>Statik marka referansı · Giriş formu ve veri toplama yok</span></div>
+  </main>
+  <footer class="banner">BELGÜ DEMO MARKA REFERANSI — GERÇEK BİR FİNANS KURULUŞUNA AİT DEĞİLDİR</footer>
+</body>
+</html>

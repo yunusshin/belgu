@@ -1,0 +1,415 @@
+.research-explorer {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.research-explorer [hidden] {
+  display: none !important;
+}
+.research-query {
+  padding: 17px;
+}
+.research-search {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 3px 12px;
+  background: var(--base);
+}
+.research-search svg {
+  color: var(--accent);
+  flex: none;
+}
+.research-search input {
+  width: 100%;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  padding: 11px 0;
+  color: var(--ink);
+  outline-offset: 0;
+}
+.research-search > span {
+  flex: none;
+  color: var(--muted);
+  font-size: 10px;
+}
+.research-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  padding: 13px 0;
+}
+.research-filters label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+.research-filters select,
+.research-view-controls select,
+.research-view-controls input {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 7px;
+  padding: 7px 9px;
+  min-width: 0;
+  max-width: 100%;
+}
+.research-filters select {
+  display: block;
+  margin-top: 4px;
+}
+.research-filters .research-check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+.research-check input,
+.research-checkbox-cell input {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+.research-view-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.research-view-controls > input {
+  flex: 1 1 130px;
+  width: 130px;
+}
+.research-view-controls > select {
+  flex: 1 1 170px;
+  max-width: 250px;
+}
+.research-view-controls .button {
+  font-size: 11px;
+  padding: 7px 10px;
+}
+.research-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 4px;
+}
+.research-filter-chips button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line);
+  background: var(--accent-soft);
+  color: var(--ink);
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+.research-filter-chips .research-clear {
+  background: none;
+  border-color: transparent;
+  color: var(--muted);
+  margin-left: auto;
+}
+.research-selection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.research-selection > span {
+  margin-right: auto;
+  color: var(--ink);
+  font-size: 11px;
+}
+.research-selection small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+}
+.research-selection .button {
+  font-size: 10px;
+}
+.research-explorer .entity-table .research-checkbox-cell {
+  width: 40px;
+  min-width: 40px;
+  padding-left: 14px;
+  padding-right: 8px;
+}
+.research-explorer .entity-table th:nth-child(2) {
+  min-width: 220px;
+}
+.research-explorer .entity-table th:nth-child(3),
+.research-explorer .entity-table td:nth-child(3) {
+  display: table-cell;
+}
+.research-entity-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-left: 23px;
+  margin-top: 5px;
+}
+.research-entity-signals span {
+  font-size: 9px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0 4px;
+  color: var(--muted);
+}
+.research-graph {
+  min-width: 0;
+  padding-top: 14px;
+}
+.research-trail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 18px 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.research-trail > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: none;
+  font-size: 10px;
+  color: var(--muted);
+}
+.research-trail button {
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0;
+  background: none;
+  padding: 4px 5px;
+  font-size: 10px;
+}
+.research-trail button[aria-current] {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 5px;
+}
+.research-graph-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px 12px;
+}
+.research-graph-actions > div {
+  flex: 1 1 190px;
+  min-width: 0;
+}
+.research-graph-actions strong {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+.research-graph-actions span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.research-graph-actions .button {
+  font-size: 10px;
+}
+.research-pins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 18px 12px;
+}
+.research-pins > span {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 3px 5px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  gap: 4px;
+  background: var(--accent-soft);
+}
+.research-pins button {
+  border: 0;
+  background: none;
+  padding: 2px;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+}
+.research-graph-scroll {
+  width: 100%;
+  max-height: 440px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-block: 1px solid var(--line);
+  background: radial-gradient(var(--line) 0.7px, transparent 0.7px);
+  background-size: 22px 22px;
+}
+.research-graph-svg {
+  display: block;
+  flex: none;
+  max-width: none;
+}
+.research-edge-hit {
+  stroke: transparent;
+  stroke-width: 13;
+  fill: none;
+}
+.research-edge-line {
+  stroke: var(--accent);
+  stroke-width: 1.3;
+  opacity: 0.3;
+  fill: none;
+  pointer-events: none;
+}
+.research-graph-edge {
+  cursor: pointer;
+}
+.research-graph-edge:hover .research-edge-line,
+.research-graph-edge:focus .research-edge-line,
+.research-graph-edge.active .research-edge-line {
+  opacity: 1;
+  stroke-width: 3;
+}
+.research-graph-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 18px 6px;
+}
+.research-graph-page > span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.research-graph-page .button {
+  font-size: 10px;
+}
+.research-graph-note {
+  color: var(--muted);
+  font-size: 10px;
+  padding: 5px 18px 12px;
+  line-height: 1.7;
+}
+.research-edge-detail {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 18px;
+  border-block: 1px solid var(--line);
+  background: var(--accent-soft);
+  font-size: 11px;
+}
+.research-edge-detail .button {
+  padding: 5px 8px;
+  font-size: 10px;
+}
+.research-edge-list {
+  margin: 0 18px 15px;
+  font-size: 10px;
+}
+.research-edge-list summary {
+  cursor: pointer;
+  color: var(--muted);
+  padding: 8px 0;
+}
+.research-edge-list > div {
+  display: grid;
+  gap: 6px;
+  max-height: 250px;
+  overflow: auto;
+}
+.research-edge-list .edge-pill {
+  width: 100%;
+  text-align: left;
+  padding: 8px;
+  font-size: 10px;
+  align-items: flex-start;
+}
+.research-edge-list .edge-pill span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.research-edge-list small {
+  display: block;
+  color: var(--muted);
+}
+.research-candidate-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+.research-candidate-pagination > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .research-query {
+    padding: 12px;
+  }
+  .research-search > span {
+    display: none;
+  }
+  .research-search input {
+    font-size: 12px;
+  }
+  .research-filters {
+    gap: 12px;
+  }
+  .research-filters > label {
+    flex: 1 1 140px;
+  }
+  .research-filters select {
+    width: 100%;
+  }
+  .research-view-controls > select,
+  .research-view-controls > input {
+    flex-basis: 100%;
+    max-width: none;
+    width: 100%;
+  }
+  .research-explorer .section-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .research-explorer .map-toolbar {
+    flex-wrap: wrap;
+  }
+  .research-explorer .entity-table th:nth-child(4),
+  .research-explorer .entity-table td:nth-child(4) {
+    display: none;
+  }
+  .research-explorer .map-footer {
+    flex-wrap: wrap;
+  }
+  .research-graph-actions,
+  .research-trail,
+  .research-pins {
+    padding-inline: 12px;
+  }
+}

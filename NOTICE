@@ -1,0 +1,6 @@
+Belgü — Copyright (c) 2026 Yunus Sahin. MIT License.
+
+Discovery adapters incorporate and adapt algorithms from Yunus Sahin's
+MIT-licensed Yelme project, commit 65f3104bdb318085e12210c9c09dd31393926d7e.
+The original copyright and license are preserved in LICENSE.
+See docs/core-provenance.md for the specific modules and changed behavior.

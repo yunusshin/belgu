@@ -1,0 +1,25 @@
+name: Belgü checks
+on: [push, pull_request]
+jobs:
+  functional:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: python scripts/check_repository.py
+      - run: bash scripts/setup.sh
+      - run: .venv/bin/python -m playwright install-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng tesseract-ocr-tur
+      - run: .venv/bin/python -m pytest tests evals -q
+      - run: npm --prefix web run generate:api
+      - run: npm --prefix web run build
+      - run: npx playwright install --with-deps chromium
+        working-directory: web
+      - run: npm --prefix web run test:e2e

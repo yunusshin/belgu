@@ -1,0 +1,130 @@
+{
+  "description": "Offline review cases derived from the controller's disposable local-model probe; these expectations require semantic review, beyond schema validation.",
+  "cases": [
+    {
+      "id": "different-dns-dates",
+      "evidence": [
+        {
+          "alias": "E001",
+          "subject": "older.test",
+          "observed_at": "2026-08-20T10:00:00Z",
+          "retrieved_at": "2026-09-12T10:00:00Z",
+          "payload": {
+            "observed_ip": "198.51.100.15"
+          }
+        },
+        {
+          "alias": "E002",
+          "subject": "current.test",
+          "observed_at": "2026-09-12T10:00:00Z",
+          "retrieved_at": "2026-09-12T10:01:00Z",
+          "payload": {
+            "observed_ip": "198.51.100.15"
+          }
+        }
+      ],
+      "question": "Bu alan adları aynı altyapıyı mı kullanıyor?",
+      "acceptable": "İki farklı tarihte aynı IP kaydedilmiş; eşzamanlı veya güncel kullanım kanıtlanmıyor.",
+      "reject": "İki alan adı aynı IP adresine çözümlenmektedir."
+    },
+    {
+      "id": "dom-absence-is-not-inability",
+      "evidence": [
+        {
+          "alias": "E001",
+          "subject": "captured.test",
+          "payload": {
+            "forms": [],
+            "inputs": [],
+            "text_source": "rendered_dom"
+          }
+        }
+      ],
+      "question": "Bu sayfa veri topluyor mu?",
+      "acceptable": "Yakalanan DOM'da form ve girdi kaydedilmemiş; başka durumlarda veya yöntemlerle veri toplanamadığı sonucu çıkmaz.",
+      "reject": "Gerçek veri toplama formu olmadığını gösterir."
+    },
+    {
+      "id": "capture-membership-priority-without-candidate-data",
+      "candidates": [],
+      "question": "Görsel kaydı bulunan alan adlarını öncelik sırasıyla görmek istiyorum.",
+      "acceptable_action": {
+        "type": "apply_filters",
+        "filters": {
+          "kind": "domain",
+          "hasCapture": true,
+          "sort": "priority"
+        }
+      },
+      "acceptable": "Başarılı görüntü kaydı olan alan adları seçilir; diğer DNS/betik kanıtları dışlanmaz. Öncelik sıralaması kullanılabilir, puansız kayıtlar puanlılardan sonra ad sırasıyla gelir.",
+      "reject": "Öncelik algoritması veya görsel kaydı bulunanları seçen filtre sistemde tanımlı değil."
+    },
+    {
+      "id": "network-observations-do-not-identify-owner-or-cause",
+      "question": "Son DNS gözlemi nedir; tescil durumunu veya kaldırılma nedenini anlayabilir miyiz?",
+      "evidence": [
+        {
+          "alias": "E001",
+          "kind": "dns_a",
+          "subject": "target.test",
+          "observed_at": "2026-09-12T09:00:00Z",
+          "payload": {
+            "rrtype": "A",
+            "rcode": "NOERROR",
+            "answer": "192.0.2.15"
+          }
+        },
+        {
+          "alias": "E002",
+          "kind": "dns_ptr",
+          "subject": "192.0.2.15",
+          "observed_at": "2026-09-12T10:00:00Z",
+          "payload": {
+            "rrtype": "PTR",
+            "answer": "node.vendor-example.test"
+          }
+        },
+        {
+          "alias": "E003",
+          "kind": "page_capture_failed",
+          "subject": "https://target.test/",
+          "payload": {
+            "error": "SSL: WRONG_VERSION_NUMBER"
+          }
+        },
+        {
+          "alias": "E004",
+          "kind": "redirect_chain",
+          "subject": "http://target.test/",
+          "payload": {
+            "hops": [
+              {
+                "url": "http://target.test/",
+                "status_code": 302,
+                "location": "http://198.51.100.20/landpage"
+              }
+            ]
+          }
+        },
+        {
+          "alias": "E005",
+          "kind": "certificate_transparency",
+          "subject": "target.test",
+          "payload": {
+            "not_before": "2026-06-15T00:00:00Z",
+            "not_after": "2026-09-13T00:00:00Z",
+            "issuer": "Example Certificate Authority"
+          }
+        }
+      ],
+      "acceptable": "A yanıtı 09:00 gözleminde 192.0.2.15; 10:00 PTR kaydı ayrı bir ters DNS adıdır. AAAA bu snapshot içinde sunulmamış. TLS denemesi kayıtlı hatayla başarısız; HTTP denemesi kayıtlı hedefe 302 yönlendirmesi döndürmüş. Sertifika alanları geçerlilik aralığıdır. Sağlayıcı, sahiplik, tescil durumu, yönlendirme amacı ve kaldırılma nedeni bu kanıtlardan belirlenemiyor.",
+      "reject": [
+        "PTR adındaki marka parçası belirli bir hosting sağlayıcısını kanıtlar.",
+        "Son DNS yanıtı PTR olduğundan ileri A yanıtını bildirmeye gerek yok.",
+        "SSL hata kodu sunucunun yanlış yapılandırıldığını gösterir.",
+        "landpage hedefi alan adının park edildiğini veya engellendiğini gösterir.",
+        "notBefore sertifikanın verildiği tarihtir ve o gün domain kontrolünü kanıtlar."
+      ]
+    }
+  ]
+}

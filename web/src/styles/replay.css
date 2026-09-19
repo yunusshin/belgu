@@ -1,0 +1,344 @@
+.replay-workspace {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.replay-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 16px;
+}
+.replay-recorded-label,
+.replay-mask > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+}
+.replay-recorded-label {
+  color: var(--accent);
+  margin-right: auto;
+}
+.replay-mask {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+}
+.replay-mask input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+.replay-stage-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 16px;
+  align-items: stretch;
+}
+.replay-graph,
+.replay-event {
+  min-width: 0;
+  min-height: 440px;
+}
+.replay-graph {
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 46%,
+      color-mix(in srgb, var(--accent-soft) 62%, transparent),
+      transparent 48%
+    ),
+    var(--surface);
+}
+.replay-graph > header,
+.replay-event > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.replay-graph h3 {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.replay-graph svg {
+  display: block;
+  width: 100%;
+  height: 375px;
+}
+.replay-graph line {
+  stroke: color-mix(in srgb, var(--muted) 55%, transparent);
+  stroke-width: 1.3;
+}
+.replay-graph circle {
+  fill: color-mix(in srgb, var(--accent-soft) 72%, var(--surface));
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+.replay-graph text {
+  fill: var(--ink);
+  font-size: 9px;
+  font-family: var(--mono);
+}
+.replay-graph svg.dense text {
+  font-size: 6.5px;
+}
+.replay-graph > .empty {
+  min-height: 350px;
+}
+.replay-event {
+  padding-bottom: 19px;
+  display: flex;
+  flex-direction: column;
+}
+.replay-event > header {
+  padding: 18px 19px 0;
+  border: 0;
+}
+.replay-event > h2,
+.replay-event > p,
+.replay-event > dl,
+.replay-evidence-links {
+  margin-left: 19px;
+  margin-right: 19px;
+}
+.replay-event > h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-top: 23px;
+  overflow-wrap: anywhere;
+}
+.replay-event > p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.replay-event > dl {
+  margin-top: auto;
+}
+.replay-event dl > div {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line-soft);
+  font-size: 10px;
+}
+.replay-event dt {
+  color: var(--muted);
+}
+.replay-event dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.replay-evidence-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 11px;
+}
+.replay-evidence-links .text-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+}
+.replay-controls {
+  display: grid;
+  grid-template-columns: auto minmax(160px, 1fr) 120px;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 16px;
+}
+.replay-controls > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.replay-play {
+  min-width: 93px;
+  justify-content: center;
+}
+.replay-seek,
+.replay-speed {
+  min-width: 0;
+}
+.replay-seek > span,
+.replay-speed > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 9px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.replay-seek strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.replay-seek input {
+  display: block;
+  width: 100%;
+  accent-color: var(--accent);
+}
+.replay-speed select {
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 9px;
+  color: var(--ink);
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  font-size: 10px;
+}
+.replay-coverage {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--line);
+  border-radius: 10px;
+}
+.replay-coverage > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: var(--surface);
+  padding: 15px 17px;
+}
+.replay-coverage span,
+.replay-coverage small {
+  font-size: 9px;
+  color: var(--muted);
+}
+.replay-coverage strong {
+  font-family: var(--mono);
+  font-size: 17px;
+  font-weight: 500;
+}
+.replay-coverage ul {
+  grid-column: 1/-1;
+  margin: 0;
+  padding: 14px 30px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.75;
+}
+.replay-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.replay-actions > span {
+  color: var(--muted);
+  font-size: 9px;
+}
+.replay-actions > div {
+  display: flex;
+  gap: 9px;
+}
+.belgu-replay-focus #root {
+  visibility: hidden;
+}
+.replay-focus {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--canvas);
+  color: var(--ink);
+}
+.replay-focus::backdrop {
+  background: var(--canvas);
+}
+.replay-focus > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px 3vw;
+  border-bottom: 1px solid var(--line);
+}
+.replay-focus > header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.replay-focus-brand {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 1.8px;
+}
+.replay-focus > main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(290px, 0.7fr);
+  gap: 18px;
+  padding: 22px 3vw 15px;
+}
+.replay-focus > .replay-controls {
+  margin: 0 3vw 22px;
+}
+@media (max-width: 900px) {
+  .replay-stage-grid,
+  .replay-focus > main {
+    grid-template-columns: 1fr;
+  }
+  .replay-graph,
+  .replay-event {
+    min-height: 360px;
+  }
+  .replay-graph svg {
+    height: 310px;
+  }
+}
+@media (max-width: 600px) {
+  .replay-toolbar,
+  .replay-actions,
+  .replay-actions > div {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .replay-recorded-label {
+    margin-right: 0;
+  }
+  .replay-mask {
+    justify-content: space-between;
+  }
+  .replay-controls {
+    grid-template-columns: 1fr;
+  }
+  .replay-controls > div {
+    justify-content: space-between;
+  }
+  .replay-play {
+    flex: 1;
+  }
+  .replay-coverage {
+    grid-template-columns: 1fr;
+  }
+  .replay-coverage ul {
+    grid-column: 1;
+  }
+  .replay-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+  .replay-focus > main {
+    padding: 12px;
+  }
+  .replay-focus > .replay-controls {
+    margin: 0 12px 12px;
+  }
+}
