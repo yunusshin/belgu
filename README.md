@@ -1,3 +1,5 @@
+![Belgü — İşaretten istihbarata](docs/media/belgu-banner.png)
+
 # Belgü
 
 **Finans odaklı oltalama araştırmaları için analist çalışma alanı.**
@@ -8,7 +10,7 @@ Belgü, şüpheli bir URL veya alan adından başlayarak ilişkili altyapıyı, 
 
 [Ürün videosu · 2:16](docs/media/belgu-demo-v0.5.0.mp4) · [Türkçe altyazı](docs/media/belgu-demo-v0.5.0.srt) · [Kullanım kılavuzu](docs/user-guide.md)
 
-Görseller ve video, örnek verilerle çalışan demo profilinden alınmıştır. Videodaki model yanıtları kayıtlıdır.
+Ekran görüntüleri ve video, örnek verilerle çalışan demo profilinden alınmıştır. Videodaki model yanıtları kayıtlıdır.
 
 ## Özellikler
 
